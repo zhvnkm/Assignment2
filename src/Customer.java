@@ -2,7 +2,7 @@
 public class Customer extends User {
 
     public Customer(String name, String email) {
-        // super(name, email);          // родительский конструктор
+        super(name, email);          // родительский конструктор
     }
 
     @Override
