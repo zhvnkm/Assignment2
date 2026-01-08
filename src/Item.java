@@ -43,7 +43,7 @@ public class Item {
     }
 
     @Override
-    public int hashCode() {  //
+    public int hashCode() {  //быстро найти ячейку
         return name.hashCode() + Double.valueOf(price).hashCode();
     }
 }
