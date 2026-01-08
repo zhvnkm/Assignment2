@@ -2,7 +2,7 @@
 public class Customer extends User {
 
     public Customer(String name, String email) {
-        super(name, email);
+        // super(name, email);          // родительский конструктор
     }
 
     @Override
@@ -17,12 +17,13 @@ public class Customer extends User {
 
     @Override
     public boolean equals(Object obj) {
-        if (!(obj instanceof Customer)) return false;
-        return super.equals(obj);
+        if (!(obj instanceof Customer)) return false; // если это не Customer — не равны
+        return super.equals(obj);  // иначе вызываем equals родителя (User)
+}
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() {  //быстро найти ячейку
         return super.hashCode();
     }
 }
