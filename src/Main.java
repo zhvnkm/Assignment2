@@ -7,8 +7,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // --- Примеры заказов ---
-        Customer c1 = new Customer("Alice", "alice@mail.com");
-        Customer c2 = new Customer("Bob", "bob@mail.com");
+        Customer c1 = new Customer("Zhanka", "zhanka@mail.com");
+        Customer c2 = new Customer("Karina", "karina@mail.com");
 
         Item item1 = new Item("Laptop", 1200);
         Item item2 = new Item("Phone", 800);
@@ -25,7 +25,7 @@ public class Main {
 
         System.out.println("\n--- Примеры заказов уже добавлены ---\n");
 
-        // --- Scanner-меню для интерактивной работы ---
+        // Scanner-меню для интерактивной работы
         while (true) {
             System.out.println("\n--- Online Shopping System ---");
             System.out.println("1. Add order");
@@ -38,12 +38,12 @@ public class Main {
             System.out.print("Choose option: ");
 
             int option = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine(); // съесть символ новой строки
 
             switch (option) {
                 case 1:
                     System.out.print("Enter customer name: ");
-                    String cname = scanner.nextLine();
+                    String cname = scanner.nextLine(); // читает строку, которую ввёл пользователь
                     System.out.print("Enter customer email: ");
                     String cemail = scanner.nextLine();
                     Customer customer = new Customer(cname, cemail);
@@ -55,7 +55,7 @@ public class Main {
 
                     System.out.print("Enter quantity: ");
                     int quantity = scanner.nextInt();
-                    scanner.nextLine(); // consume newline
+                    scanner.nextLine(); 
 
                     Item item = new Item(iname, iprice);
                     Order order = new Order(item, customer, quantity);
