@@ -5,11 +5,11 @@ public class Item {
 
     public Item(String name, double price) {
         if (price < 0) throw new IllegalArgumentException("Price must be >= 0");
-        this.name = name;
+        this.name = name;  //присваиваем им значения, которые передали в конструктор
         this.price = price;
     }
 
-    public String getName() {
+    public String getName() { 
         return name;
     }
 
@@ -31,19 +31,19 @@ public class Item {
     }
 
     @Override
-    public String toString() {
+    public String toString() {  //возвращает удобное текстовое представление объекта
         return "Item{name='" + name + "', price=$" + price + "}";
     }
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) {  //сравнение по содержимому 
         if (!(obj instanceof Item)) return false;
         Item other = (Item) obj;
         return name.equals(other.name) && price == other.price;
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode() {  //
         return name.hashCode() + Double.valueOf(price).hashCode();
     }
 }
