@@ -1,7 +1,7 @@
 // Shop.java
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.ArrayList; //Берём готовый список, который сам растёт
+import java.util.Comparator; //Инструмент для сортировки объектов по правилу
+import java.util.List; //Берём общий тип списка, чтобы работать с разными списками одинаково»
 
 public class Shop {
     private List<Order> orders;
